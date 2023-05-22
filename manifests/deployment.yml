@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vishalproject7 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vishalproject7
+  template:
+    metadata:
+      labels:
+        app: vishalproject7 
+    spec:
+      containers:
+        - name: vishalproject7 
+          image: boxacr.azurecr.io/vishalproject7
+          ports:
+          - containerPort: 80
